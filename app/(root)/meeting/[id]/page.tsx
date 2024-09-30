@@ -21,7 +21,7 @@ const MeetingPage = () => {
 
   if (!call) return (
     <p className="text-center text-3xl font-bold text-white">
-      Call Not Found
+      Chamada não encontrada
     </p>
   );
 

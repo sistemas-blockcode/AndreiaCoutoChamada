@@ -1,7 +1,6 @@
 'use client';
 
 import { Call, CallRecording } from '@stream-io/video-react-sdk';
-
 import Loader from './Loader';
 import { useGetCalls } from '@/hooks/useGetCalls';
 import MeetingCard from './MeetingCard';
@@ -30,11 +29,11 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const getNoCallsMessage = () => {
     switch (type) {
       case 'ended':
-        return 'No Previous Calls';
+        return 'Nenhuma chamada anterior';
       case 'upcoming':
-        return 'No Upcoming Calls';
+        return 'Nenhuma próxima chamada';
       case 'recordings':
-        return 'No Recordings';
+        return 'Sem gravações';
       default:
         return '';
     }
@@ -101,7 +100,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
           />
         ))
       ) : (
-        <h1 className="text-2xl font-bold text-white">{noCallsMessage}</h1>
+        <h1 className="text-2xl font-bold text-[#204289]">{noCallsMessage}</h1>
       )}
     </div>
   );

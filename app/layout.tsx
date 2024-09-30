@@ -11,7 +11,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "YOOM",
+  title: "Unidas Autochamada",
   description: "Video calling App",
   icons: {
     icon: "/icons/logo.svg",
@@ -22,7 +22,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <ClerkProvider
         appearance={{
           layout: {
@@ -32,13 +32,13 @@ export default function RootLayout({
           variables: {
             colorText: "#fff",
             colorPrimary: "#0E78F9",
-            colorBackground: "#1C1F2E",
-            colorInputBackground: "#252A41",
+            colorBackground: "#F1F5FB",
+            colorInputBackground: "#F1F5FB",
             colorInputText: "#fff",
           },
         }}
       >
-        <body className={`${inter.className} bg-dark-2`}>
+        <body className={`${inter.className} bg-[#F1F5FB]`}>
           <Toaster />
           {children}
         </body>

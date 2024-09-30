@@ -15,8 +15,8 @@ const Table = ({
   title: string;
   description: string;
 }) => {
-  return (
-    <div className="flex flex-col items-start gap-2 xl:flex-row">
+  return ( 
+    <div className="flex flex-col items-start gap-2 xl:flex-row bg-[#F1F5FB]">
       <h1 className="text-base font-medium text-sky-1 lg:text-xl xl:min-w-32">
         {title}:
       </h1>
@@ -56,27 +56,27 @@ const PersonalRoom = () => {
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
 
   return (
-    <section className="flex size-full flex-col gap-10 text-white">
-      <h1 className="text-xl font-bold lg:text-3xl">Personal Meeting Room</h1>
-      <div className="flex w-full flex-col gap-8 xl:max-w-[900px]">
-        <Table title="Topic" description={`${user?.username}'s Meeting Room`} />
-        <Table title="Meeting ID" description={meetingId!} />
-        <Table title="Invite Link" description={meetingLink} />
+    <section className="flex size-full flex-col gap-10 text-[#204289]">
+      <h1 className="text-xl font-bold lg:text-3xl">Sala de reuniões pessoais</h1>
+      <div className="flex w-full flex-col gap-8 xl:max-w-[900px] text-[#204289]">
+        <Table title="Tópico" description={`${user?.username}'s Sala de reuniões`} />
+        <Table title="ID da reunião" description={meetingId!} />
+        <Table title="Link de convite" description={meetingLink} />
       </div>
       <div className="flex gap-5">
         <Button className="bg-blue-1" onClick={startRoom}>
-          Start Meeting
+          Iniciar Chamada
         </Button>
         <Button
           className="bg-dark-3"
           onClick={() => {
             navigator.clipboard.writeText(meetingLink);
             toast({
-              title: "Link Copied",
+              title: "Link copiado",
             });
           }}
         >
-          Copy Invitation
+          Copiar convite
         </Button>
       </div>
     </section>

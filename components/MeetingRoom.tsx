@@ -74,7 +74,7 @@ const MeetingRoom = () => {
             </DropdownMenuTrigger>
           </div>
           <DropdownMenuContent className="border-dark-1 bg-dark-1 text-white">
-            {['Grid', 'Speaker-Left', 'Speaker-Right'].map((item, index) => (
+            {['Grade', 'Esquerdo', 'Speaker-Right'].map((item, index) => (
               <div key={index}>
                 <DropdownMenuItem
                   onClick={() =>

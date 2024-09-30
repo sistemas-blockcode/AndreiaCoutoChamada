@@ -1,29 +1,30 @@
+import { Home2, Calendar1, Archive, Video, UserAdd } from 'iconsax-react';
+
 export const sidebarLinks = [
   {
-    imgURL: '/icons/Home.svg',
+    Icon: Home2, // Ícone da página inicial
     route: '/',
     label: 'Home',
   },
-
   {
-    imgURL: '/icons/upcoming.svg',
+    Icon: Calendar1, // Ícone de eventos ou calendário
     route: '/upcoming',
-    label: 'Upcoming',
+    label: 'Programadas',
   },
   {
-    imgURL: '/icons/previous.svg',
+    Icon: Archive, // Ícone para eventos passados ou arquivados
     route: '/previous',
-    label: 'Previous',
+    label: 'Realizadas',
   },
   {
-    imgURL: '/icons/Video.svg',
+    Icon: Video, // Ícone de vídeo para gravações
     route: '/recordings',
-    label: 'Recordings',
+    label: 'Gravações',
   },
   {
-    imgURL: '/icons/add-personal.svg',
+    Icon: UserAdd, // Ícone para adicionar um usuário ou sala pessoal
     route: '/personal-room',
-    label: 'Personal Room',
+    label: 'Sala Pessoal',
   },
 ];
 

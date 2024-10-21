@@ -32,10 +32,10 @@ export default function RootLayout({
             logoImageUrl: "/icons/logo.svg",
           },
           variables: {
-            colorText: "#003366",
+            colorText: "#fff",
             colorPrimary: "#005BAC",
-            colorBackground: "#F8F9FA",
-            colorInputBackground: "#E0E7ED",
+            colorBackground: "#000",
+            colorInputBackground: "#000",
             colorInputText: "#333333",
           },
           elements: {

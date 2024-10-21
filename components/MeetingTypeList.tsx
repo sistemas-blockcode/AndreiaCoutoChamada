@@ -13,7 +13,10 @@ import { Textarea } from './ui/textarea';
 import ReactDatePicker from 'react-datepicker';
 import { useToast } from './ui/use-toast';
 import { Input } from './ui/input';
-import { ptBR } from 'date-fns/locale'; // Adicionando suporte à localização em pt-BR
+import { ptBR } from 'date-fns/locale';
+
+// Importando icons da biblioteca iconsax-react
+import { AddSquare, Video, Calendar, Record } from 'iconsax-react';
 
 const initialValues = {
   dateTime: new Date(),
@@ -34,32 +37,37 @@ const MeetingTypeList = () => {
 
   const createMeeting = async () => {
     if (!client || !user) return;
+
     try {
       if (!values.dateTime) {
         toast({ title: 'Por favor, selecione uma data e hora' });
         return;
       }
+
       const id = crypto.randomUUID();
       const call = client.call('default', id);
+
       if (!call) throw new Error('Falha ao criar reunião');
+
       const startsAt =
         values.dateTime.toISOString() || new Date(Date.now()).toISOString();
       const description = values.description || 'Reunião Instantânea';
+
       await call.getOrCreate({
         data: {
           starts_at: startsAt,
-          custom: {
-            description,
-          },
+          custom: { description },
         },
       });
+
       setCallDetail(call);
+
       if (!values.description) {
         router.push(`/meeting/${call.id}`);
       }
-      toast({
-        title: 'Reunião criada',
-      });
+
+      toast({ title: 'Reunião criada' });
+
     } catch (error) {
       console.error(error);
       toast({ title: 'Falha ao criar reunião' });
@@ -73,27 +81,27 @@ const MeetingTypeList = () => {
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       <HomeCard
-        img="/icons/add-meeting.svg"
+        icon={<AddSquare size="32" />} // Ícone da biblioteca iconsax
         title="Iniciar Chamada"
         description="Inicie uma reunião instantânea"
         handleClick={() => setMeetingState('isInstantMeeting')}
       />
       <HomeCard
-        img="/icons/join-meeting.svg"
+        icon={<Video size="32" />} // Ícone da biblioteca iconsax
         title="Entrar em uma Chamada"
         description="via link de convite"
         className="bg-blue-1"
         handleClick={() => setMeetingState('isJoiningMeeting')}
       />
       <HomeCard
-        img="/icons/schedule.svg"
+        icon={<Calendar size="32" />} // Ícone da biblioteca iconsax
         title="Agendar Reunião"
         description="Planeje suas reuniões"
         className="bg-purple-1"
         handleClick={() => setMeetingState('isScheduleMeeting')}
       />
       <HomeCard
-        img="/icons/recordings.svg"
+        icon={<Record size="32" />} // Ícone da biblioteca iconsax
         title="Veja as Gravações"
         description="Gravações de reuniões"
         className="bg-yellow-1"

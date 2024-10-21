@@ -27,7 +27,7 @@ const MeetingSetup = ({
 
   if (!call) {
     throw new Error(
-      'useStreamCall must be used within a StreamCall component.',
+      'useStreamCall deve ser usado dentro de um componente StreamCall.',
     );
   }
 
@@ -47,14 +47,14 @@ const MeetingSetup = ({
   if (callTimeNotArrived)
     return (
       <Alert
-        title={`Your Meeting has not started yet. It is scheduled for ${callStartsAt.toLocaleString()}`}
+        title={`Sua reunião ainda não começou. Está agendada para ${callStartsAt.toLocaleString()}`}
       />
     );
 
   if (callHasEnded)
     return (
       <Alert
-        title="The call has been ended by the host"
+        title="A chamada foi encerrada pelo anfitrião"
         iconUrl="/icons/call-ended.svg"
       />
     );
@@ -69,9 +69,9 @@ const MeetingSetup = ({
             type="checkbox"
             checked={isMicCamToggled}
             onChange={(e) => setIsMicCamToggled(e.target.checked)}
-            className='text-black'
+            className="text-black"
           />
-          Participe com microfone e câmera desligados
+          Participar com microfone e câmera desligados
         </label>
         <DeviceSettings />
       </div>
@@ -79,7 +79,6 @@ const MeetingSetup = ({
         className="rounded-md bg-green-500 px-4 py-2.5"
         onClick={() => {
           call.join();
-
           setIsSetupComplete(true);
         }}
       >

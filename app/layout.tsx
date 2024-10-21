@@ -11,8 +11,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Unidas Autochamada",
-  description: "Video calling App",
+  title: "UNIDAS - Autochamada",
+  description: "Chamadas em vídeo da UNIDAS Autogestão",
   icons: {
     icon: "/icons/logo.svg",
   },
@@ -32,7 +32,7 @@ export default function RootLayout({
           variables: {
             colorText: "#fff",
             colorPrimary: "#0E78F9",
-            colorBackground: "#000",
+            colorBackground: "#fff",
             colorInputBackground: "#F1F5FB",
             colorInputText: "#000",
           },

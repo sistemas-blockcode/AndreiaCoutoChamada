@@ -1,18 +1,17 @@
 'use client';
 
-import Image from 'next/image';
-
+import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
 interface HomeCardProps {
   className?: string;
-  img: string;
+  icon: ReactNode; // Agora aceitando ícone como um componente React
   title: string;
   description: string;
   handleClick?: () => void;
 }
 
-const HomeCard = ({ className, img, title, description, handleClick }: HomeCardProps) => {
+const HomeCard = ({ className, icon, title, description, handleClick }: HomeCardProps) => {
   return (
     <section
       className={cn(
@@ -22,9 +21,10 @@ const HomeCard = ({ className, img, title, description, handleClick }: HomeCardP
       onClick={handleClick}
     >
       <div className="flex-center glassmorphism size-12 rounded-[10px]">
-        <Image src={img} alt="meeting" width={27} height={27} />
+        {/* Usando o ícone passado como prop */}
+        {icon}
       </div>
-      
+
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold">{title}</h1>
         <p className="text-sm font-light">{description}</p>

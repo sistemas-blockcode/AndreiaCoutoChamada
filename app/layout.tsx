@@ -13,10 +13,10 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "UNIDAS - Autochamada",
-  description: "Chamadas em vídeo da UNIDAS Autogestão",
+  title: "Andreia Couto",
+  description: "Chamadas em vídeo",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/image/logotipo.png",
   },
 };
 
@@ -29,14 +29,14 @@ export default function RootLayout({
         appearance={{
           layout: {
             socialButtonsVariant: "iconButton",
-            logoImageUrl: "/icons/logo.svg",
+            logoImageUrl: "/image/logotipo.png",
           },
           variables: {
-            colorText: "#fff",
+            colorText: "#000",
             colorPrimary: "#005BAC",
-            colorBackground: "#000",
-            colorInputBackground: "#000",
-            colorInputText: "#333333",
+            colorBackground: "#fff",
+            colorInputBackground: "#fff",
+            colorInputText: "#000",
           },
           elements: {
             cardTitle: "font-bold text-[#003366]", 

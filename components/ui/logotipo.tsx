@@ -8,7 +8,7 @@ type Props = {
 const logotipo = ({size}:Props) => {
   return (
     <Image
-                src={'/images/logotipo.svg'}
+                src={'/images/logotipo.png'}
                 alt="Unidas"
                 width={size}
                 height={size}

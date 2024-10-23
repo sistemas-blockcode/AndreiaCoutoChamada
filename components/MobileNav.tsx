@@ -34,7 +34,7 @@ const MobileNav = () => {
         {/* Ajuste de cor do background e texto */}
         <SheetContent side="left" className="border-none bg-[#F1F5FB] text-[#2C0D73]">
           <Link href="/" className="items-center justify-center -mt-6">
-            <Logotipo size={200}/>
+            <Logotipo size={80}/>
           </Link>
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>

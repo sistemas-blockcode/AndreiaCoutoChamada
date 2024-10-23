@@ -8,10 +8,10 @@ const Home = () => {
 
   return (
     <section className="flex size-full flex-col gap-5 text-white bg-[#F1F5FB]">
-      <div className="h-[303px] w-full rounded-[20px] bg-hero bg-cover">
+      <div className="h-[303px] w-full rounded-[20px] bg-green-600 bg-cover">
         <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
           <h2 className=" glassmorphism max-w-[420px] font-semibold rounded-lg py-2 px-4 text-center text-base ">
-            Olá, seja bem vindo ao UNIDAS Autochamada!
+            Olá, seja bem vindo!
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>

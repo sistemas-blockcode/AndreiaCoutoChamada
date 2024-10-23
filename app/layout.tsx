@@ -14,7 +14,7 @@ const inter = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andreia Couto",
-  description: "Chamadas em vídeo",
+  description: "Chamadas em vídeo Andreia Couto",
   icons: {
     icon: "/image/logotipo.png",
   },
